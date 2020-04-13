@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 
-const Header = () => {
+const Header: React.FC = () => {
   const router = useRouter();
 
   const links = [
@@ -35,11 +35,7 @@ const Header = () => {
           </div>
           <div className='h-full flex-1 flex items-center justify-center lg:items-stretch lg:justify-start'>
             <div className='flex items-center'>
-              <img
-                className='block h-8 w-auto'
-                src='assets/images/logo.png'
-                alt=''
-              />
+              <img className='block h-8 w-auto' src='images/logo.png' alt='' />
             </div>
             <div className='hidden lg:block lg:ml-6'>
               <div className='flex h-full'>{_renderLinks()}</div>

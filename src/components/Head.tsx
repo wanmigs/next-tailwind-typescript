@@ -1,6 +1,10 @@
 import Head from 'next/head';
 
-const HeadComponent = ({ title = '' }) => {
+interface Props {
+  title?: string;
+}
+
+const HeadComponent: React.FC<Props> = ({ title = '' }) => {
   return (
     <Head>
       <title>{title} | Smartspaces</title>
