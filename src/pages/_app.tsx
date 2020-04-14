@@ -3,6 +3,7 @@ import { NextComponentType, NextPageContext } from 'next';
 import App from 'next/app';
 import 'assets/sass/app.scss';
 import SiteLayout from 'layouts/SiteLayout';
+import { FloorProvider } from 'service/floors';
 
 interface Props {
   Component: NextComponentType<NextPageContext, any, {}>;
@@ -14,9 +15,11 @@ class MyApp extends App<Props> {
     const { Component, pageProps } = this.props;
 
     return (
-      <SiteLayout {...pageProps}>
-        <Component {...pageProps} />
-      </SiteLayout>
+      <FloorProvider>
+        <SiteLayout {...pageProps}>
+          <Component {...pageProps} />
+        </SiteLayout>
+      </FloorProvider>
     );
   }
 }

@@ -1,0 +1,14 @@
+.box {
+  @apply bg-gray-400 h-64 w-64 transform absolute opacity-75 cursor-pointer transition-all duration-100;
+  --transform-skew-y: -50deg;
+  --transform-skew-x: 35deg;
+  --transform-rotate: 104deg;
+
+  &:first-child {
+    @apply opacity-100;
+  }
+
+  &:hover {
+    z-index: 10;
+  }
+}
