@@ -19,6 +19,8 @@
     "autoprefixer": "^9.7.6",
     "axios": "^0.19.2",
     "next": "^9.3.4",
+    "next-compose-plugins": "^2.2.0",
+    "next-runtime-dotenv": "^1.2.0",
     "node-sass": "^4.13.1",
     "qrcode.react": "^1.0.0",
     "react": "^16.13.1",
